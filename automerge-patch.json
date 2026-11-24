@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "GitHub auto-merge for patch updates of HTTP Helm charts.",
+  "packageRules": [
+    {
+      "description": "Auto-merge a patch update from helmv3, argocd, or flux when the datasource is helm.",
+      "matchManagers": ["helmv3", "argocd", "flux"],
+      "matchDatasources": ["helm"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "platformAutomerge": true
+    }
+  ]
+}

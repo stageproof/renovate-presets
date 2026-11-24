@@ -1,0 +1,4644 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Stageproof index badge for HTTP Helm, Argo CD, and Flux pull requests.",
+  "packageRules": [
+    {
+      "description": "Add the Stageproof index badge to HTTP Helm pull requests.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "prBodyNotes": [
+        "![stageproof](https://stageproof.github.io/index/badge.svg?chart={{{depName}}}&from={{{currentVersion}}}&registry={{{prBodyDefinitions.stageproofRegistry}}}&to={{{newVersion}}})"
+      ]
+    },
+    {
+      "description": "Repository URL for actions-runner-controller.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "actions-runner-controller"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://actions-runner-controller.github.io/actions-runner-controller"
+      }
+    },
+    {
+      "description": "Repository URL for akhq.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "akhq"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://akhq.io"
+      }
+    },
+    {
+      "description": "Repository URL for alertmanager.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "alertmanager"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for alloy.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "alloy"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://grafana.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for ambassador.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "ambassador"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://getambassador.io"
+      }
+    },
+    {
+      "description": "Repository URL for apisix.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "apisix"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.apiseven.com"
+      }
+    },
+    {
+      "description": "Repository URL for argo-events.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "argo-events"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://argoproj.github.io/argo-helm"
+      }
+    },
+    {
+      "description": "Repository URL for argo-rollouts.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "argo-rollouts"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://argoproj.github.io/argo-helm"
+      }
+    },
+    {
+      "description": "Repository URL for argo-workflows.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "argo-workflows"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://argoproj.github.io/argo-helm"
+      }
+    },
+    {
+      "description": "Repository URL for argocd-apps.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "argocd-apps"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://argoproj.github.io/argo-helm"
+      }
+    },
+    {
+      "description": "Repository URL for argocd-image-updater.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "argocd-image-updater"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://argoproj.github.io/argo-helm"
+      }
+    },
+    {
+      "description": "Repository URL for artifact-hub.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "artifact-hub"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://artifacthub.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for artifactory.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "artifactory"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.jfrog.io"
+      }
+    },
+    {
+      "description": "Repository URL for artifactory-oss.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "artifactory-oss"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.jfrog.io"
+      }
+    },
+    {
+      "description": "Repository URL for atlantis.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "atlantis"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://runatlantis.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for authentik.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "authentik"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.goauthentik.io"
+      }
+    },
+    {
+      "description": "Repository URL for aws-for-fluent-bit.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "aws-for-fluent-bit"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://aws.github.io/eks-charts"
+      }
+    },
+    {
+      "description": "Repository URL for aws-load-balancer-controller.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "aws-load-balancer-controller"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://aws.github.io/eks-charts"
+      }
+    },
+    {
+      "description": "Repository URL for aws-node-termination-handler.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "aws-node-termination-handler"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://aws.github.io/eks-charts"
+      }
+    },
+    {
+      "description": "Repository URL for aws-vpc-cni.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "aws-vpc-cni"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://aws.github.io/eks-charts"
+      }
+    },
+    {
+      "description": "Repository URL for awx.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "awx"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://adwerx.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for backstage.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "backstage"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/backstage/charts/backstage"
+      }
+    },
+    {
+      "description": "Repository URL for base.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "base"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://istio-release.storage.googleapis.com/charts"
+      }
+    },
+    {
+      "description": "Repository URL for bitcoin-core.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "bitcoin-core"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.hiro.so/hirosystems"
+      }
+    },
+    {
+      "description": "Repository URL for botkube.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "botkube"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.botkube.io"
+      }
+    },
+    {
+      "description": "Repository URL for camunda-platform.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "camunda-platform"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.camunda.io"
+      }
+    },
+    {
+      "description": "Repository URL for ceph-csi-cephfs.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "ceph-csi-cephfs"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://ceph.github.io/csi-charts"
+      }
+    },
+    {
+      "description": "Repository URL for ceph-csi-rbd.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "ceph-csi-rbd"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://ceph.github.io/csi-charts"
+      }
+    },
+    {
+      "description": "Repository URL for cert-manager.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "cert-manager"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.jetstack.io"
+      }
+    },
+    {
+      "description": "Repository URL for chaos-mesh.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "chaos-mesh"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.chaos-mesh.org"
+      }
+    },
+    {
+      "description": "Repository URL for chartmuseum.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "chartmuseum"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://chartmuseum.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for cilium.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "cilium"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.cilium.io"
+      }
+    },
+    {
+      "description": "Repository URL for clamav.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "clamav"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://wiremind.github.io/wiremind-helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for clearml.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "clearml"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://clearml.github.io/clearml-helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for cloudflared.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "cloudflared"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://community-charts.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for cloudnative-pg.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "cloudnative-pg"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://cloudnative-pg.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for cluster.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "cluster"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://cloudnative-pg.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for cluster-autoscaler.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "cluster-autoscaler"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kubernetes.github.io/autoscaler"
+      }
+    },
+    {
+      "description": "Repository URL for cni.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "cni"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://istio-release.storage.googleapis.com/charts"
+      }
+    },
+    {
+      "description": "Repository URL for cockroachdb.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "cockroachdb"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.cockroachdb.com"
+      }
+    },
+    {
+      "description": "Repository URL for code-server.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "code-server"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://nicholaswilde.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for coder.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "coder"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.coder.com/v2"
+      }
+    },
+    {
+      "description": "Repository URL for community-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "community-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://mongodb.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for confluence.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "confluence"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://atlassian.github.io/data-center-helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for connect.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "connect"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://1password.github.io/connect-helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for consul.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "consul"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.releases.hashicorp.com"
+      }
+    },
+    {
+      "description": "Repository URL for coredns.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "coredns"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://coredns.github.io/helm"
+      }
+    },
+    {
+      "description": "Repository URL for cost-analyzer.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "cost-analyzer"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kubecost.github.io/cost-analyzer"
+      }
+    },
+    {
+      "description": "Repository URL for crossplane.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "crossplane"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.crossplane.io/master"
+      }
+    },
+    {
+      "description": "Repository URL for crowdsec.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "crowdsec"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://crowdsecurity.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for csi-driver-nfs.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "csi-driver-nfs"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts"
+      }
+    },
+    {
+      "description": "Repository URL for dagster.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "dagster"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://dagster-io.github.io/helm"
+      }
+    },
+    {
+      "description": "Repository URL for datadog.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "datadog"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.datadoghq.com"
+      }
+    },
+    {
+      "description": "Repository URL for datadog-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "datadog-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.datadoghq.com"
+      }
+    },
+    {
+      "description": "Repository URL for datahub.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "datahub"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.datahubproject.io"
+      }
+    },
+    {
+      "description": "Repository URL for democratic-csi.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "democratic-csi"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://democratic-csi.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for dependency-track.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "dependency-track"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://dependencytrack.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for descheduler.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "descheduler"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kubernetes-sigs.github.io/descheduler"
+      }
+    },
+    {
+      "description": "Repository URL for dex.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "dex"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/dexidp/helm-charts/dex"
+      }
+    },
+    {
+      "description": "Repository URL for docker-registry.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "docker-registry"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.twun.io"
+      }
+    },
+    {
+      "description": "Repository URL for dragonfly.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "dragonfly"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://dragonflyoss.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for drone.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "drone"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.drone.io"
+      }
+    },
+    {
+      "description": "Repository URL for eck-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "eck-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.elastic.co"
+      }
+    },
+    {
+      "description": "Repository URL for eclipse-che.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "eclipse-che"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://eclipse-che.github.io/che-operator/charts"
+      }
+    },
+    {
+      "description": "Repository URL for elasticsearch.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "elasticsearch"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.elastic.co"
+      }
+    },
+    {
+      "description": "Repository URL for emqx.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "emqx"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://repos.emqx.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for external-dns.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "external-dns"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kubernetes-sigs.github.io/external-dns"
+      }
+    },
+    {
+      "description": "Repository URL for external-secrets.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "external-secrets"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.external-secrets.io"
+      }
+    },
+    {
+      "description": "Repository URL for falco.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "falco"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://falcosecurity.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for filebeat.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "filebeat"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.elastic.co"
+      }
+    },
+    {
+      "description": "Repository URL for fission-all.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "fission-all"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://fission.github.io/fission-charts"
+      }
+    },
+    {
+      "description": "Repository URL for flagger.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "flagger"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://flagger.app"
+      }
+    },
+    {
+      "description": "Repository URL for flowise.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "flowise"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://cowboysysop.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for fluent-bit.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "fluent-bit"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://fluent.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for fluentd.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "fluentd"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://fluent.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for flux2.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "flux2"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://fluxcd-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for forgejo.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "forgejo"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://code.forgejo.org/forgejo-helm/forgejo"
+      }
+    },
+    {
+      "description": "Repository URL for forgejo-runner.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "forgejo-runner"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://codeberg.org/wrenix/helm-charts/forgejo-runner"
+      }
+    },
+    {
+      "description": "Repository URL for gatekeeper.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "gatekeeper"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://open-policy-agent.github.io/gatekeeper/charts"
+      }
+    },
+    {
+      "description": "Repository URL for gateway.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "gateway"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://istio-release.storage.googleapis.com/charts"
+      }
+    },
+    {
+      "description": "Repository URL for gitea.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "gitea"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://dl.gitea.com/charts"
+      }
+    },
+    {
+      "description": "Repository URL for gitlab.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "gitlab"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "http://charts.gitlab.io"
+      }
+    },
+    {
+      "description": "Repository URL for gitlab-agent.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "gitlab-agent"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "http://charts.gitlab.io"
+      }
+    },
+    {
+      "description": "Repository URL for gitlab-runner.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "gitlab-runner"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "http://charts.gitlab.io"
+      }
+    },
+    {
+      "description": "Repository URL for gitops-runtime.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "gitops-runtime"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://quay.io/codefresh/gitops-runtime"
+      }
+    },
+    {
+      "description": "Repository URL for goldilocks.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "goldilocks"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.fairwinds.com/stable"
+      }
+    },
+    {
+      "description": "Repository URL for grafana.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "grafana"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://grafana-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for grafana-agent.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "grafana-agent"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://grafana.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for graylog.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "graylog"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.kong-z.com"
+      }
+    },
+    {
+      "description": "Repository URL for guacamole.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "guacamole"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.beryju.org"
+      }
+    },
+    {
+      "description": "Repository URL for harbor.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "harbor"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.goharbor.io"
+      }
+    },
+    {
+      "description": "Repository URL for headlamp.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "headlamp"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kubernetes-sigs.github.io/headlamp"
+      }
+    },
+    {
+      "description": "Repository URL for home-assistant.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "home-assistant"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "http://pajikos.github.io/home-assistant-helm-chart"
+      }
+    },
+    {
+      "description": "Repository URL for immich.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "immich"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/immich-app/immich-charts/immich"
+      }
+    },
+    {
+      "description": "Repository URL for influxdb2.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "influxdb2"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.influxdata.com"
+      }
+    },
+    {
+      "description": "Repository URL for ingress.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "ingress"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.konghq.com"
+      }
+    },
+    {
+      "description": "Repository URL for ingress-nginx.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "ingress-nginx"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kubernetes.github.io/ingress-nginx"
+      }
+    },
+    {
+      "description": "Repository URL for istiod.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "istiod"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://istio-release.storage.googleapis.com/charts"
+      }
+    },
+    {
+      "description": "Repository URL for jaeger.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "jaeger"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://jaegertracing.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for jaeger-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "jaeger-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://jaegertracing.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for jenkins.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "jenkins"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.jenkins.io"
+      }
+    },
+    {
+      "description": "Repository URL for jira.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "jira"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://atlassian.github.io/data-center-helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for jitsi-meet.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "jitsi-meet"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://jitsi-contrib.github.io/jitsi-helm"
+      }
+    },
+    {
+      "description": "Repository URL for jupyterhub.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "jupyterhub"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://jupyterhub.github.io/helm-chart"
+      }
+    },
+    {
+      "description": "Repository URL for k10.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "k10"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.kasten.io"
+      }
+    },
+    {
+      "description": "Repository URL for k8s-monitoring.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "k8s-monitoring"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://grafana.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for kafka-ui.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kafka-ui"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://ui.charts.kafbat.io"
+      }
+    },
+    {
+      "description": "Repository URL for karpenter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "karpenter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://public.ecr.aws/karpenter/karpenter"
+      }
+    },
+    {
+      "description": "Repository URL for keda.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "keda"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kedacore.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for keel.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "keel"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.keel.sh"
+      }
+    },
+    {
+      "description": "Repository URL for kestra.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kestra"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.kestra.io"
+      }
+    },
+    {
+      "description": "Repository URL for keycloakx.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "keycloakx"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://codecentric.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for keydb.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "keydb"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://enapter.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for kibana.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kibana"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.elastic.co"
+      }
+    },
+    {
+      "description": "Repository URL for kong.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kong"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.konghq.com"
+      }
+    },
+    {
+      "description": "Repository URL for kube-image-keeper.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kube-image-keeper"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.enix.io"
+      }
+    },
+    {
+      "description": "Repository URL for kube-prometheus-stack.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kube-prometheus-stack"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for kube-state-metrics.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kube-state-metrics"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for kubed.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kubed"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.appscode.com/stable"
+      }
+    },
+    {
+      "description": "Repository URL for kubernetes-dashboard.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kubernetes-dashboard"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kubernetes.github.io/dashboard"
+      }
+    },
+    {
+      "description": "Repository URL for kubeshark.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kubeshark"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.kubeshark.com"
+      }
+    },
+    {
+      "description": "Repository URL for kubeview.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kubeview"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://code.benco.io/kubeview/deploy/helm"
+      }
+    },
+    {
+      "description": "Repository URL for kured.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kured"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kubereboot.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for kyverno.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kyverno"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kyverno.github.io/kyverno"
+      }
+    },
+    {
+      "description": "Repository URL for kyverno-policies.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "kyverno-policies"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kyverno.github.io/kyverno"
+      }
+    },
+    {
+      "description": "Repository URL for langfuse.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "langfuse"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://langfuse.github.io/langfuse-k8s"
+      }
+    },
+    {
+      "description": "Repository URL for linkerd-control-plane.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "linkerd-control-plane"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.linkerd.io/stable"
+      }
+    },
+    {
+      "description": "Repository URL for linkerd-crds.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "linkerd-crds"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.linkerd.io/stable"
+      }
+    },
+    {
+      "description": "Repository URL for linkerd-viz.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "linkerd-viz"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.linkerd.io/stable"
+      }
+    },
+    {
+      "description": "Repository URL for local-path-provisioner.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "local-path-provisioner"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.containeroo.ch"
+      }
+    },
+    {
+      "description": "Repository URL for locust.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "locust"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://raw.githubusercontent.com/deliveryhero/helm-charts/refs/heads/master"
+      }
+    },
+    {
+      "description": "Repository URL for logstash.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "logstash"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.elastic.co"
+      }
+    },
+    {
+      "description": "Repository URL for longhorn.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "longhorn"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.longhorn.io"
+      }
+    },
+    {
+      "description": "Repository URL for mail.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mail"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://bokysan.github.io/docker-postfix"
+      }
+    },
+    {
+      "description": "Repository URL for mailhog.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mailhog"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://codecentric.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for mailpit.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mailpit"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://jouve.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for mailu.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mailu"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://mailu.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for mariadb.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mariadb"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/mariadb"
+      }
+    },
+    {
+      "description": "Repository URL for mariadb-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mariadb-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.mariadb.com/mariadb-operator"
+      }
+    },
+    {
+      "description": "Repository URL for matrix-synapse.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "matrix-synapse"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://ananace.gitlab.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for mattermost-team-edition.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mattermost-team-edition"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.mattermost.com"
+      }
+    },
+    {
+      "description": "Repository URL for meilisearch.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "meilisearch"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://meilisearch.github.io/meilisearch-kubernetes"
+      }
+    },
+    {
+      "description": "Repository URL for meshery.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "meshery"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://meshery.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for metabase.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "metabase"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://pmint93.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for metallb.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "metallb"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://metallb.github.io/metallb"
+      }
+    },
+    {
+      "description": "Repository URL for metricbeat.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "metricbeat"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.elastic.co"
+      }
+    },
+    {
+      "description": "Repository URL for metrics-server.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "metrics-server"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kubernetes-sigs.github.io/metrics-server"
+      }
+    },
+    {
+      "description": "Repository URL for milvus.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "milvus"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://raw.githubusercontent.com/milvus-io/milvus-helm/gh-pages"
+      }
+    },
+    {
+      "description": "Repository URL for mimir-distributed.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mimir-distributed"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://grafana.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for minecraft.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "minecraft"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://itzg.github.io/minecraft-server-charts"
+      }
+    },
+    {
+      "description": "Repository URL for mlflow.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mlflow"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://community-charts.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for mongo-express.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mongo-express"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://cowboysysop.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for mongodb.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mongodb"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/mongodb"
+      }
+    },
+    {
+      "description": "Repository URL for mysql.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mysql"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.wso2.com"
+      }
+    },
+    {
+      "description": "Repository URL for mysql-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "mysql-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://mysql.github.io/mysql-operator"
+      }
+    },
+    {
+      "description": "Repository URL for nacos.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "nacos"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://ygqygq2.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for nats.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "nats"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://nats-io.github.io/k8s/helm/charts"
+      }
+    },
+    {
+      "description": "Repository URL for netdata.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "netdata"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://netdata.github.io/helmchart"
+      }
+    },
+    {
+      "description": "Repository URL for nextcloud.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "nextcloud"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://nextcloud.github.io/helm"
+      }
+    },
+    {
+      "description": "Repository URL for nexus3.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "nexus3"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://stevehipwell.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for nfs-server-provisioner.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "nfs-server-provisioner"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kvaps.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for nfs-subdir-external-provisioner.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "nfs-subdir-external-provisioner"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner"
+      }
+    },
+    {
+      "description": "Repository URL for nginx-gateway-fabric.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "nginx-gateway-fabric"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/nginx/charts/nginx-gateway-fabric"
+      }
+    },
+    {
+      "description": "Repository URL for nginx-ingress.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "nginx-ingress"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.nginx.com/stable"
+      }
+    },
+    {
+      "description": "Repository URL for nifi.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "nifi"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://cetic.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for node-local-dns.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "node-local-dns"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://raw.githubusercontent.com/deliveryhero/helm-charts/refs/heads/master"
+      }
+    },
+    {
+      "description": "Repository URL for node-problem-detector.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "node-problem-detector"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://raw.githubusercontent.com/deliveryhero/helm-charts/refs/heads/master"
+      }
+    },
+    {
+      "description": "Repository URL for node-red.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "node-red"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://schwarzit.github.io/node-red-chart"
+      }
+    },
+    {
+      "description": "Repository URL for nxrm-ha.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "nxrm-ha"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://sonatype.github.io/helm3-charts"
+      }
+    },
+    {
+      "description": "Repository URL for oauth2-proxy.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "oauth2-proxy"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://oauth2-proxy.github.io/manifests"
+      }
+    },
+    {
+      "description": "Repository URL for okteto.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "okteto"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.okteto.com"
+      }
+    },
+    {
+      "description": "Repository URL for ollama.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "ollama"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://otwld.github.io/ollama-helm"
+      }
+    },
+    {
+      "description": "Repository URL for open-webui.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "open-webui"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.openwebui.com"
+      }
+    },
+    {
+      "description": "Repository URL for openbao.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "openbao"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://openbao.github.io/openbao-helm"
+      }
+    },
+    {
+      "description": "Repository URL for opencost.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "opencost"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://opencost.github.io/opencost-helm-chart"
+      }
+    },
+    {
+      "description": "Repository URL for openebs.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "openebs"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://openebs.github.io/openebs"
+      }
+    },
+    {
+      "description": "Repository URL for openfaas.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "openfaas"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://openfaas.github.io/faas-netes"
+      }
+    },
+    {
+      "description": "Repository URL for openfga.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "openfga"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://openfga.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for openldap-stack-ha.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "openldap-stack-ha"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://jp-gouin.github.io/helm-openldap"
+      }
+    },
+    {
+      "description": "Repository URL for openmetadata.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "openmetadata"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.open-metadata.org"
+      }
+    },
+    {
+      "description": "Repository URL for openproject.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "openproject"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.openproject.org"
+      }
+    },
+    {
+      "description": "Repository URL for opensearch.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "opensearch"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://opensearch-project.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for opensearch-dashboards.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "opensearch-dashboards"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://opensearch-project.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for opensearch-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "opensearch-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://opensearch-project.github.io/opensearch-k8s-operator"
+      }
+    },
+    {
+      "description": "Repository URL for opentelemetry-collector.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "opentelemetry-collector"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://open-telemetry.github.io/opentelemetry-helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for opentelemetry-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "opentelemetry-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://open-telemetry.github.io/opentelemetry-helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://operator.min.io"
+      }
+    },
+    {
+      "description": "Repository URL for outline.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "outline"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://community-charts.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for penpot.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "penpot"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.penpot.app"
+      }
+    },
+    {
+      "description": "Repository URL for pgadmin4.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "pgadmin4"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.runix.net"
+      }
+    },
+    {
+      "description": "Repository URL for pihole.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "pihole"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://mojo2600.github.io/pihole-kubernetes"
+      }
+    },
+    {
+      "description": "Repository URL for plantuml.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "plantuml"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://stevehipwell.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for podinfo.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "podinfo"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://stefanprodan.github.io/podinfo"
+      }
+    },
+    {
+      "description": "Repository URL for polaris.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "polaris"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.fairwinds.com/stable"
+      }
+    },
+    {
+      "description": "Repository URL for policy-reporter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "policy-reporter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kyverno.github.io/policy-reporter"
+      }
+    },
+    {
+      "description": "Repository URL for portainer.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "portainer"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://portainer.github.io/k8s"
+      }
+    },
+    {
+      "description": "Repository URL for prometheus.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "prometheus"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for prometheus-adapter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "prometheus-adapter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for prometheus-blackbox-exporter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "prometheus-blackbox-exporter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for prometheus-elasticsearch-exporter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "prometheus-elasticsearch-exporter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for prometheus-kafka-exporter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "prometheus-kafka-exporter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for prometheus-mongodb-exporter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "prometheus-mongodb-exporter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for prometheus-mysql-exporter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "prometheus-mysql-exporter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for prometheus-node-exporter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "prometheus-node-exporter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for prometheus-operator-crds.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "prometheus-operator-crds"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for prometheus-postgres-exporter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "prometheus-postgres-exporter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for prometheus-pushgateway.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "prometheus-pushgateway"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for prometheus-redis-exporter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "prometheus-redis-exporter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for pulsar.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "pulsar"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://pulsar.apache.org/charts"
+      }
+    },
+    {
+      "description": "Repository URL for pxc-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "pxc-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://percona.github.io/percona-helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for pyroscope.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "pyroscope"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://grafana.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for qdrant.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "qdrant"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://qdrant.github.io/qdrant-helm"
+      }
+    },
+    {
+      "description": "Repository URL for rabbitmq.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "rabbitmq"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/rabbitmq"
+      }
+    },
+    {
+      "description": "Repository URL for rbac-manager.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "rbac-manager"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.fairwinds.com/stable"
+      }
+    },
+    {
+      "description": "Repository URL for redis.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "redis"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/redis"
+      }
+    },
+    {
+      "description": "Repository URL for redis-ha.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "redis-ha"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://dandydeveloper.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for redpanda.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "redpanda"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.redpanda.com"
+      }
+    },
+    {
+      "description": "Repository URL for reflector.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "reflector"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://emberstack.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for reloader.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "reloader"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://stakater.github.io/stakater-charts"
+      }
+    },
+    {
+      "description": "Repository URL for renovate.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "renovate"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/renovatebot/charts/renovate"
+      }
+    },
+    {
+      "description": "Repository URL for rocketchat.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "rocketchat"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://rocketchat.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for rook-ceph.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "rook-ceph"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.rook.io/release"
+      }
+    },
+    {
+      "description": "Repository URL for rook-ceph-cluster.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "rook-ceph-cluster"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.rook.io/release"
+      }
+    },
+    {
+      "description": "Repository URL for rundeck.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "rundeck"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://eugenmayer.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for rustfs.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "rustfs"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.rustfs.com"
+      }
+    },
+    {
+      "description": "Repository URL for sealed-secrets.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "sealed-secrets"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://bitnami-labs.github.io/sealed-secrets"
+      }
+    },
+    {
+      "description": "Repository URL for seaweedfs.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "seaweedfs"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://seaweedfs.github.io/seaweedfs/helm"
+      }
+    },
+    {
+      "description": "Repository URL for secrets-store-csi-driver.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "secrets-store-csi-driver"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts"
+      }
+    },
+    {
+      "description": "Repository URL for semaphore.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "semaphore"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://semaphoreui.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for signoz.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "signoz"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.signoz.io"
+      }
+    },
+    {
+      "description": "Repository URL for snapshot-controller.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "snapshot-controller"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://piraeus.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for solr.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "solr"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://solr.apache.org/charts"
+      }
+    },
+    {
+      "description": "Repository URL for solr-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "solr-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://solr.apache.org/charts"
+      }
+    },
+    {
+      "description": "Repository URL for sonarqube.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "sonarqube"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://SonarSource.github.io/helm-chart-sonarqube"
+      }
+    },
+    {
+      "description": "Repository URL for spinnaker.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "spinnaker"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helmcharts.opsmx.com"
+      }
+    },
+    {
+      "description": "Repository URL for stackgres-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "stackgres-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://stackgres.io/downloads/stackgres-k8s/stackgres/helm"
+      }
+    },
+    {
+      "description": "Repository URL for stacks-blockchain.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "stacks-blockchain"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.hiro.so/hirosystems"
+      }
+    },
+    {
+      "description": "Repository URL for step-certificates.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "step-certificates"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://smallstep.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for sumologic.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "sumologic"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://sumologic.github.io/sumologic-kubernetes-collection"
+      }
+    },
+    {
+      "description": "Repository URL for teleport-cluster.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "teleport-cluster"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.releases.teleport.dev"
+      }
+    },
+    {
+      "description": "Repository URL for tempo.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "tempo"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://grafana-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for tempo-distributed.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "tempo-distributed"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://grafana-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for terraform.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "terraform"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.releases.hashicorp.com"
+      }
+    },
+    {
+      "description": "Repository URL for tetragon.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "tetragon"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.cilium.io"
+      }
+    },
+    {
+      "description": "Repository URL for thanos.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "thanos"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://thanos-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for tigera-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "tigera-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://docs.projectcalico.org/charts"
+      }
+    },
+    {
+      "description": "Repository URL for traefik.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "traefik"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://traefik.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for trino.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "trino"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://trinodb.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for trivy-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "trivy-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://aquasecurity.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for trust-manager.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "trust-manager"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.jetstack.io"
+      }
+    },
+    {
+      "description": "Repository URL for unleash.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "unleash"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://docs.getunleash.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for uptime-kuma.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "uptime-kuma"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://dirsigler.github.io/uptime-kuma-helm"
+      }
+    },
+    {
+      "description": "Repository URL for vault.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "vault"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.releases.hashicorp.com"
+      }
+    },
+    {
+      "description": "Repository URL for vault-secrets-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "vault-secrets-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.releases.hashicorp.com"
+      }
+    },
+    {
+      "description": "Repository URL for vcluster.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "vcluster"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.loft.sh"
+      }
+    },
+    {
+      "description": "Repository URL for vector.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "vector"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.vector.dev"
+      }
+    },
+    {
+      "description": "Repository URL for velero.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "velero"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://vmware-tanzu.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for verdaccio.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "verdaccio"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.verdaccio.org"
+      }
+    },
+    {
+      "description": "Repository URL for vertical-pod-autoscaler.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "vertical-pod-autoscaler"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://cowboysysop.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for victoria-logs-single.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "victoria-logs-single"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://victoriametrics.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for victoria-metrics-cluster.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "victoria-metrics-cluster"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://victoriametrics.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for victoria-metrics-k8s-stack.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "victoria-metrics-k8s-stack"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://victoriametrics.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for victoria-metrics-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "victoria-metrics-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://victoriametrics.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for victoria-metrics-single.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "victoria-metrics-single"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://victoriametrics.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for vpa.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "vpa"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.fairwinds.com/stable"
+      }
+    },
+    {
+      "description": "Repository URL for weblate.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "weblate"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.weblate.org"
+      }
+    },
+    {
+      "description": "Repository URL for x509-certificate-exporter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "x509-certificate-exporter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.enix.io"
+      }
+    },
+    {
+      "description": "Repository URL for yourls.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "yourls"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.yourls.org"
+      }
+    },
+    {
+      "description": "Repository URL for zabbix.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "zabbix"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://zabbix-community.github.io/helm-zabbix"
+      }
+    },
+    {
+      "description": "Repository URL for zammad.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "zammad"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/zammad/charts/zammad"
+      }
+    },
+    {
+      "description": "Repository URL for zitadel.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "zitadel"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.zitadel.com"
+      }
+    },
+    {
+      "description": "Repository URL for ztunnel.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchPackageNames": [
+        "ztunnel"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://istio-release.storage.googleapis.com/charts"
+      }
+    }
+  ]
+}
