@@ -15,14 +15,14 @@ The badge states a chart-defaults report. The text is `no blocking finding (defa
 The preset adds one image to pull requests from the `helmv3`, `argocd`, and `flux` managers when the datasource is `helm`:
 
 ```text
-https://stageproof.github.io/index/badge.svg?chart={{{depName}}}&from={{{currentVersion}}}&registry={{{prBodyDefinitions.stageproofRegistry}}}&to={{{newVersion}}}
+https://stageproof-index-badges.stageproof.workers.dev/badge.svg?chart={{{depName}}}&from={{{currentVersion}}}&registry={{{prBodyDefinitions.stageproofRegistry}}}&to={{{newVersion}}}
 ```
 
 `chart` is the Helm chart name. On Renovate 39.264.0 that name is `depName` for an HTTP Helm chart. `registry` comes from `prBodyDefinitions`, because that Renovate version rejects `registryUrl` in a template.
 
 `default.json` assigns a repository URL when the chart name appears once in the index catalog of 300 charts on 2026-11-24. These names appear more than once, so they have no repository in the preset: `airflow`, `argo-cd`, `dify`, `keycloak`, `loki`, `minio`, `n8n`, `netbox`, `postgres`, `rancher`, `strimzi-kafka-operator`, `valkey`, `vaultwarden`.
 
-The SVG files are published with the index site. GitHub Pages returns HTTP 404 for `/badge.svg`. The worker in `stageproof/index` answers that query with HTTP 200, and it answers `not indexed` when the pair is absent. That worker is not deployed yet.
+The SVG files are published with the index site. GitHub Pages returns HTTP 404 for `/badge.svg`. The worker at `https://stageproof-index-badges.stageproof.workers.dev` answers that query with HTTP 200. It answers `not indexed` when the pair is absent, and also when the nightly site has not published that SVG yet.
 
 ## Patch automerge
 
