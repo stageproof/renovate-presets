@@ -26,11 +26,45 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "actions-runner-controller"
+      "matchJsonata": [
+        "depName = 'actions-runner-controller' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://actions-runner-controller.github.io/actions-runner-controller']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://actions-runner-controller.github.io/actions-runner-controller"
+      }
+    },
+    {
+      "description": "Repository URL for airflow at https://airflow-helm.github.io/charts.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'airflow' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://airflow-helm.github.io/charts']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://airflow-helm.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for airflow at https://airflow.apache.org.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'airflow' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://airflow.apache.org']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://airflow.apache.org"
       }
     },
     {
@@ -43,8 +77,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "akhq"
+      "matchJsonata": [
+        "depName = 'akhq' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://akhq.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://akhq.io"
@@ -60,8 +94,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "alertmanager"
+      "matchJsonata": [
+        "depName = 'alertmanager' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -77,8 +111,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "alloy"
+      "matchJsonata": [
+        "depName = 'alloy' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://grafana.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://grafana.github.io/helm-charts"
@@ -94,8 +128,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "ambassador"
+      "matchJsonata": [
+        "depName = 'ambassador' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://getambassador.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://getambassador.io"
@@ -111,11 +145,28 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "apisix"
+      "matchJsonata": [
+        "depName = 'apisix' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.apiseven.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.apiseven.com"
+      }
+    },
+    {
+      "description": "Repository URL for argo-cd.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'argo-cd' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://argoproj.github.io/argo-helm']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://argoproj.github.io/argo-helm"
       }
     },
     {
@@ -128,8 +179,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "argo-events"
+      "matchJsonata": [
+        "depName = 'argo-events' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://argoproj.github.io/argo-helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://argoproj.github.io/argo-helm"
@@ -145,8 +196,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "argo-rollouts"
+      "matchJsonata": [
+        "depName = 'argo-rollouts' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://argoproj.github.io/argo-helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://argoproj.github.io/argo-helm"
@@ -162,8 +213,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "argo-workflows"
+      "matchJsonata": [
+        "depName = 'argo-workflows' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://argoproj.github.io/argo-helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://argoproj.github.io/argo-helm"
@@ -179,8 +230,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "argocd-apps"
+      "matchJsonata": [
+        "depName = 'argocd-apps' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://argoproj.github.io/argo-helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://argoproj.github.io/argo-helm"
@@ -196,8 +247,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "argocd-image-updater"
+      "matchJsonata": [
+        "depName = 'argocd-image-updater' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://argoproj.github.io/argo-helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://argoproj.github.io/argo-helm"
@@ -213,8 +264,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "artifact-hub"
+      "matchJsonata": [
+        "depName = 'artifact-hub' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://artifacthub.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://artifacthub.github.io/helm-charts"
@@ -230,8 +281,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "artifactory"
+      "matchJsonata": [
+        "depName = 'artifactory' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.jfrog.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.jfrog.io"
@@ -247,8 +298,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "artifactory-oss"
+      "matchJsonata": [
+        "depName = 'artifactory-oss' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.jfrog.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.jfrog.io"
@@ -264,8 +315,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "atlantis"
+      "matchJsonata": [
+        "depName = 'atlantis' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://runatlantis.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://runatlantis.github.io/helm-charts"
@@ -281,8 +332,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "authentik"
+      "matchJsonata": [
+        "depName = 'authentik' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.goauthentik.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.goauthentik.io"
@@ -298,8 +349,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "aws-for-fluent-bit"
+      "matchJsonata": [
+        "depName = 'aws-for-fluent-bit' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://aws.github.io/eks-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://aws.github.io/eks-charts"
@@ -315,8 +366,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "aws-load-balancer-controller"
+      "matchJsonata": [
+        "depName = 'aws-load-balancer-controller' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://aws.github.io/eks-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://aws.github.io/eks-charts"
@@ -332,8 +383,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "aws-node-termination-handler"
+      "matchJsonata": [
+        "depName = 'aws-node-termination-handler' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://aws.github.io/eks-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://aws.github.io/eks-charts"
@@ -349,8 +400,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "aws-vpc-cni"
+      "matchJsonata": [
+        "depName = 'aws-vpc-cni' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://aws.github.io/eks-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://aws.github.io/eks-charts"
@@ -366,28 +417,11 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "awx"
+      "matchJsonata": [
+        "depName = 'awx' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://adwerx.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://adwerx.github.io/charts"
-      }
-    },
-    {
-      "description": "Repository URL for backstage.",
-      "matchManagers": [
-        "helmv3",
-        "argocd",
-        "flux"
-      ],
-      "matchDatasources": [
-        "helm"
-      ],
-      "matchPackageNames": [
-        "backstage"
-      ],
-      "prBodyDefinitions": {
-        "stageproofRegistry": "oci://ghcr.io/backstage/charts/backstage"
       }
     },
     {
@@ -400,8 +434,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "base"
+      "matchJsonata": [
+        "depName = 'base' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://istio-release.storage.googleapis.com/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://istio-release.storage.googleapis.com/charts"
@@ -417,8 +451,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "bitcoin-core"
+      "matchJsonata": [
+        "depName = 'bitcoin-core' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.hiro.so/hirosystems']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.hiro.so/hirosystems"
@@ -434,8 +468,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "botkube"
+      "matchJsonata": [
+        "depName = 'botkube' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.botkube.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.botkube.io"
@@ -451,8 +485,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "camunda-platform"
+      "matchJsonata": [
+        "depName = 'camunda-platform' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.camunda.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.camunda.io"
@@ -468,8 +502,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "ceph-csi-cephfs"
+      "matchJsonata": [
+        "depName = 'ceph-csi-cephfs' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://ceph.github.io/csi-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://ceph.github.io/csi-charts"
@@ -485,8 +519,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "ceph-csi-rbd"
+      "matchJsonata": [
+        "depName = 'ceph-csi-rbd' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://ceph.github.io/csi-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://ceph.github.io/csi-charts"
@@ -502,8 +536,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "cert-manager"
+      "matchJsonata": [
+        "depName = 'cert-manager' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.jetstack.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.jetstack.io"
@@ -519,8 +553,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "chaos-mesh"
+      "matchJsonata": [
+        "depName = 'chaos-mesh' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.chaos-mesh.org']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.chaos-mesh.org"
@@ -536,8 +570,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "chartmuseum"
+      "matchJsonata": [
+        "depName = 'chartmuseum' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://chartmuseum.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://chartmuseum.github.io/charts"
@@ -553,8 +587,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "cilium"
+      "matchJsonata": [
+        "depName = 'cilium' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.cilium.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.cilium.io"
@@ -570,8 +604,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "clamav"
+      "matchJsonata": [
+        "depName = 'clamav' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://wiremind.github.io/wiremind-helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://wiremind.github.io/wiremind-helm-charts"
@@ -587,8 +621,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "clearml"
+      "matchJsonata": [
+        "depName = 'clearml' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://clearml.github.io/clearml-helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://clearml.github.io/clearml-helm-charts"
@@ -604,8 +638,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "cloudflared"
+      "matchJsonata": [
+        "depName = 'cloudflared' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://community-charts.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://community-charts.github.io/helm-charts"
@@ -621,8 +655,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "cloudnative-pg"
+      "matchJsonata": [
+        "depName = 'cloudnative-pg' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://cloudnative-pg.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://cloudnative-pg.io/charts"
@@ -638,8 +672,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "cluster"
+      "matchJsonata": [
+        "depName = 'cluster' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://cloudnative-pg.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://cloudnative-pg.io/charts"
@@ -655,8 +689,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "cluster-autoscaler"
+      "matchJsonata": [
+        "depName = 'cluster-autoscaler' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kubernetes.github.io/autoscaler']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kubernetes.github.io/autoscaler"
@@ -672,8 +706,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "cni"
+      "matchJsonata": [
+        "depName = 'cni' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://istio-release.storage.googleapis.com/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://istio-release.storage.googleapis.com/charts"
@@ -689,8 +723,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "cockroachdb"
+      "matchJsonata": [
+        "depName = 'cockroachdb' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.cockroachdb.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.cockroachdb.com"
@@ -706,8 +740,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "code-server"
+      "matchJsonata": [
+        "depName = 'code-server' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://nicholaswilde.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://nicholaswilde.github.io/helm-charts"
@@ -723,8 +757,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "coder"
+      "matchJsonata": [
+        "depName = 'coder' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.coder.com/v2']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.coder.com/v2"
@@ -740,8 +774,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "community-operator"
+      "matchJsonata": [
+        "depName = 'community-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://mongodb.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://mongodb.github.io/helm-charts"
@@ -757,8 +791,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "confluence"
+      "matchJsonata": [
+        "depName = 'confluence' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://atlassian.github.io/data-center-helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://atlassian.github.io/data-center-helm-charts"
@@ -774,8 +808,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "connect"
+      "matchJsonata": [
+        "depName = 'connect' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://1password.github.io/connect-helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://1password.github.io/connect-helm-charts"
@@ -791,8 +825,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "consul"
+      "matchJsonata": [
+        "depName = 'consul' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.releases.hashicorp.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.releases.hashicorp.com"
@@ -808,8 +842,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "coredns"
+      "matchJsonata": [
+        "depName = 'coredns' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://coredns.github.io/helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://coredns.github.io/helm"
@@ -825,8 +859,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "cost-analyzer"
+      "matchJsonata": [
+        "depName = 'cost-analyzer' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kubecost.github.io/cost-analyzer']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kubecost.github.io/cost-analyzer"
@@ -842,8 +876,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "crossplane"
+      "matchJsonata": [
+        "depName = 'crossplane' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.crossplane.io/master']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.crossplane.io/master"
@@ -859,8 +893,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "crowdsec"
+      "matchJsonata": [
+        "depName = 'crowdsec' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://crowdsecurity.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://crowdsecurity.github.io/helm-charts"
@@ -876,8 +910,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "csi-driver-nfs"
+      "matchJsonata": [
+        "depName = 'csi-driver-nfs' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts"
@@ -893,8 +927,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "dagster"
+      "matchJsonata": [
+        "depName = 'dagster' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://dagster-io.github.io/helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://dagster-io.github.io/helm"
@@ -910,8 +944,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "datadog"
+      "matchJsonata": [
+        "depName = 'datadog' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.datadoghq.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.datadoghq.com"
@@ -927,8 +961,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "datadog-operator"
+      "matchJsonata": [
+        "depName = 'datadog-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.datadoghq.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.datadoghq.com"
@@ -944,8 +978,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "datahub"
+      "matchJsonata": [
+        "depName = 'datahub' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.datahubproject.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.datahubproject.io"
@@ -961,8 +995,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "democratic-csi"
+      "matchJsonata": [
+        "depName = 'democratic-csi' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://democratic-csi.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://democratic-csi.github.io/charts"
@@ -978,8 +1012,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "dependency-track"
+      "matchJsonata": [
+        "depName = 'dependency-track' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://dependencytrack.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://dependencytrack.github.io/helm-charts"
@@ -995,15 +1029,15 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "descheduler"
+      "matchJsonata": [
+        "depName = 'descheduler' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kubernetes-sigs.github.io/descheduler']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kubernetes-sigs.github.io/descheduler"
       }
     },
     {
-      "description": "Repository URL for dex.",
+      "description": "Repository URL for dify at https://borispolonsky.github.io/dify-helm.",
       "matchManagers": [
         "helmv3",
         "argocd",
@@ -1012,11 +1046,28 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "dex"
+      "matchJsonata": [
+        "depName = 'dify' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://borispolonsky.github.io/dify-helm']) > 0"
       ],
       "prBodyDefinitions": {
-        "stageproofRegistry": "oci://ghcr.io/dexidp/helm-charts/dex"
+        "stageproofRegistry": "https://borispolonsky.github.io/dify-helm"
+      }
+    },
+    {
+      "description": "Repository URL for dify at https://douban.github.io/charts.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'dify' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://douban.github.io/charts']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://douban.github.io/charts"
       }
     },
     {
@@ -1029,8 +1080,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "docker-registry"
+      "matchJsonata": [
+        "depName = 'docker-registry' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.twun.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.twun.io"
@@ -1046,8 +1097,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "dragonfly"
+      "matchJsonata": [
+        "depName = 'dragonfly' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://dragonflyoss.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://dragonflyoss.github.io/helm-charts"
@@ -1063,8 +1114,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "drone"
+      "matchJsonata": [
+        "depName = 'drone' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.drone.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.drone.io"
@@ -1080,8 +1131,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "eck-operator"
+      "matchJsonata": [
+        "depName = 'eck-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.elastic.co']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.elastic.co"
@@ -1097,8 +1148,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "eclipse-che"
+      "matchJsonata": [
+        "depName = 'eclipse-che' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://eclipse-che.github.io/che-operator/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://eclipse-che.github.io/che-operator/charts"
@@ -1114,8 +1165,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "elasticsearch"
+      "matchJsonata": [
+        "depName = 'elasticsearch' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.elastic.co']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.elastic.co"
@@ -1131,8 +1182,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "emqx"
+      "matchJsonata": [
+        "depName = 'emqx' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://repos.emqx.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://repos.emqx.io/charts"
@@ -1148,8 +1199,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "external-dns"
+      "matchJsonata": [
+        "depName = 'external-dns' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kubernetes-sigs.github.io/external-dns']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kubernetes-sigs.github.io/external-dns"
@@ -1165,8 +1216,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "external-secrets"
+      "matchJsonata": [
+        "depName = 'external-secrets' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.external-secrets.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.external-secrets.io"
@@ -1182,8 +1233,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "falco"
+      "matchJsonata": [
+        "depName = 'falco' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://falcosecurity.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://falcosecurity.github.io/charts"
@@ -1199,8 +1250,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "filebeat"
+      "matchJsonata": [
+        "depName = 'filebeat' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.elastic.co']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.elastic.co"
@@ -1216,8 +1267,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "fission-all"
+      "matchJsonata": [
+        "depName = 'fission-all' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://fission.github.io/fission-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://fission.github.io/fission-charts"
@@ -1233,8 +1284,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "flagger"
+      "matchJsonata": [
+        "depName = 'flagger' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://flagger.app']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://flagger.app"
@@ -1250,8 +1301,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "flowise"
+      "matchJsonata": [
+        "depName = 'flowise' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://cowboysysop.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://cowboysysop.github.io/charts"
@@ -1267,8 +1318,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "fluent-bit"
+      "matchJsonata": [
+        "depName = 'fluent-bit' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://fluent.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://fluent.github.io/helm-charts"
@@ -1284,8 +1335,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "fluentd"
+      "matchJsonata": [
+        "depName = 'fluentd' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://fluent.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://fluent.github.io/helm-charts"
@@ -1301,45 +1352,11 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "flux2"
+      "matchJsonata": [
+        "depName = 'flux2' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://fluxcd-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://fluxcd-community.github.io/helm-charts"
-      }
-    },
-    {
-      "description": "Repository URL for forgejo.",
-      "matchManagers": [
-        "helmv3",
-        "argocd",
-        "flux"
-      ],
-      "matchDatasources": [
-        "helm"
-      ],
-      "matchPackageNames": [
-        "forgejo"
-      ],
-      "prBodyDefinitions": {
-        "stageproofRegistry": "oci://code.forgejo.org/forgejo-helm/forgejo"
-      }
-    },
-    {
-      "description": "Repository URL for forgejo-runner.",
-      "matchManagers": [
-        "helmv3",
-        "argocd",
-        "flux"
-      ],
-      "matchDatasources": [
-        "helm"
-      ],
-      "matchPackageNames": [
-        "forgejo-runner"
-      ],
-      "prBodyDefinitions": {
-        "stageproofRegistry": "oci://codeberg.org/wrenix/helm-charts/forgejo-runner"
       }
     },
     {
@@ -1352,8 +1369,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "gatekeeper"
+      "matchJsonata": [
+        "depName = 'gatekeeper' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://open-policy-agent.github.io/gatekeeper/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://open-policy-agent.github.io/gatekeeper/charts"
@@ -1369,8 +1386,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "gateway"
+      "matchJsonata": [
+        "depName = 'gateway' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://istio-release.storage.googleapis.com/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://istio-release.storage.googleapis.com/charts"
@@ -1386,8 +1403,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "gitea"
+      "matchJsonata": [
+        "depName = 'gitea' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://dl.gitea.com/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://dl.gitea.com/charts"
@@ -1403,8 +1420,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "gitlab"
+      "matchJsonata": [
+        "depName = 'gitlab' and $count(registryUrls[$replace($, /\\/+$/, '') = 'http://charts.gitlab.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "http://charts.gitlab.io"
@@ -1420,8 +1437,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "gitlab-agent"
+      "matchJsonata": [
+        "depName = 'gitlab-agent' and $count(registryUrls[$replace($, /\\/+$/, '') = 'http://charts.gitlab.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "http://charts.gitlab.io"
@@ -1437,28 +1454,11 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "gitlab-runner"
+      "matchJsonata": [
+        "depName = 'gitlab-runner' and $count(registryUrls[$replace($, /\\/+$/, '') = 'http://charts.gitlab.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "http://charts.gitlab.io"
-      }
-    },
-    {
-      "description": "Repository URL for gitops-runtime.",
-      "matchManagers": [
-        "helmv3",
-        "argocd",
-        "flux"
-      ],
-      "matchDatasources": [
-        "helm"
-      ],
-      "matchPackageNames": [
-        "gitops-runtime"
-      ],
-      "prBodyDefinitions": {
-        "stageproofRegistry": "oci://quay.io/codefresh/gitops-runtime"
       }
     },
     {
@@ -1471,8 +1471,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "goldilocks"
+      "matchJsonata": [
+        "depName = 'goldilocks' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.fairwinds.com/stable']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.fairwinds.com/stable"
@@ -1488,8 +1488,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "grafana"
+      "matchJsonata": [
+        "depName = 'grafana' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://grafana-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://grafana-community.github.io/helm-charts"
@@ -1505,8 +1505,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "grafana-agent"
+      "matchJsonata": [
+        "depName = 'grafana-agent' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://grafana.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://grafana.github.io/helm-charts"
@@ -1522,8 +1522,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "graylog"
+      "matchJsonata": [
+        "depName = 'graylog' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.kong-z.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.kong-z.com"
@@ -1539,8 +1539,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "guacamole"
+      "matchJsonata": [
+        "depName = 'guacamole' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.beryju.org']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.beryju.org"
@@ -1556,8 +1556,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "harbor"
+      "matchJsonata": [
+        "depName = 'harbor' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.goharbor.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.goharbor.io"
@@ -1573,8 +1573,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "headlamp"
+      "matchJsonata": [
+        "depName = 'headlamp' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kubernetes-sigs.github.io/headlamp']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kubernetes-sigs.github.io/headlamp"
@@ -1590,28 +1590,11 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "home-assistant"
+      "matchJsonata": [
+        "depName = 'home-assistant' and $count(registryUrls[$replace($, /\\/+$/, '') = 'http://pajikos.github.io/home-assistant-helm-chart']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "http://pajikos.github.io/home-assistant-helm-chart"
-      }
-    },
-    {
-      "description": "Repository URL for immich.",
-      "matchManagers": [
-        "helmv3",
-        "argocd",
-        "flux"
-      ],
-      "matchDatasources": [
-        "helm"
-      ],
-      "matchPackageNames": [
-        "immich"
-      ],
-      "prBodyDefinitions": {
-        "stageproofRegistry": "oci://ghcr.io/immich-app/immich-charts/immich"
       }
     },
     {
@@ -1624,8 +1607,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "influxdb2"
+      "matchJsonata": [
+        "depName = 'influxdb2' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.influxdata.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.influxdata.com"
@@ -1641,8 +1624,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "ingress"
+      "matchJsonata": [
+        "depName = 'ingress' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.konghq.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.konghq.com"
@@ -1658,8 +1641,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "ingress-nginx"
+      "matchJsonata": [
+        "depName = 'ingress-nginx' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kubernetes.github.io/ingress-nginx']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kubernetes.github.io/ingress-nginx"
@@ -1675,8 +1658,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "istiod"
+      "matchJsonata": [
+        "depName = 'istiod' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://istio-release.storage.googleapis.com/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://istio-release.storage.googleapis.com/charts"
@@ -1692,8 +1675,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "jaeger"
+      "matchJsonata": [
+        "depName = 'jaeger' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://jaegertracing.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://jaegertracing.github.io/helm-charts"
@@ -1709,8 +1692,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "jaeger-operator"
+      "matchJsonata": [
+        "depName = 'jaeger-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://jaegertracing.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://jaegertracing.github.io/helm-charts"
@@ -1726,8 +1709,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "jenkins"
+      "matchJsonata": [
+        "depName = 'jenkins' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.jenkins.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.jenkins.io"
@@ -1743,8 +1726,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "jira"
+      "matchJsonata": [
+        "depName = 'jira' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://atlassian.github.io/data-center-helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://atlassian.github.io/data-center-helm-charts"
@@ -1760,8 +1743,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "jitsi-meet"
+      "matchJsonata": [
+        "depName = 'jitsi-meet' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://jitsi-contrib.github.io/jitsi-helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://jitsi-contrib.github.io/jitsi-helm"
@@ -1777,8 +1760,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "jupyterhub"
+      "matchJsonata": [
+        "depName = 'jupyterhub' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://jupyterhub.github.io/helm-chart']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://jupyterhub.github.io/helm-chart"
@@ -1794,8 +1777,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "k10"
+      "matchJsonata": [
+        "depName = 'k10' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.kasten.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.kasten.io"
@@ -1811,8 +1794,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "k8s-monitoring"
+      "matchJsonata": [
+        "depName = 'k8s-monitoring' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://grafana.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://grafana.github.io/helm-charts"
@@ -1828,28 +1811,11 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kafka-ui"
+      "matchJsonata": [
+        "depName = 'kafka-ui' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://ui.charts.kafbat.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://ui.charts.kafbat.io"
-      }
-    },
-    {
-      "description": "Repository URL for karpenter.",
-      "matchManagers": [
-        "helmv3",
-        "argocd",
-        "flux"
-      ],
-      "matchDatasources": [
-        "helm"
-      ],
-      "matchPackageNames": [
-        "karpenter"
-      ],
-      "prBodyDefinitions": {
-        "stageproofRegistry": "oci://public.ecr.aws/karpenter/karpenter"
       }
     },
     {
@@ -1862,8 +1828,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "keda"
+      "matchJsonata": [
+        "depName = 'keda' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kedacore.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kedacore.github.io/charts"
@@ -1879,8 +1845,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "keel"
+      "matchJsonata": [
+        "depName = 'keel' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.keel.sh']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.keel.sh"
@@ -1896,11 +1862,28 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kestra"
+      "matchJsonata": [
+        "depName = 'kestra' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.kestra.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.kestra.io"
+      }
+    },
+    {
+      "description": "Repository URL for keycloak.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'keycloak' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://codecentric.github.io/helm-charts']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://codecentric.github.io/helm-charts"
       }
     },
     {
@@ -1913,8 +1896,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "keycloakx"
+      "matchJsonata": [
+        "depName = 'keycloakx' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://codecentric.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://codecentric.github.io/helm-charts"
@@ -1930,8 +1913,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "keydb"
+      "matchJsonata": [
+        "depName = 'keydb' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://enapter.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://enapter.github.io/charts"
@@ -1947,8 +1930,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kibana"
+      "matchJsonata": [
+        "depName = 'kibana' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.elastic.co']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.elastic.co"
@@ -1964,8 +1947,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kong"
+      "matchJsonata": [
+        "depName = 'kong' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.konghq.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.konghq.com"
@@ -1981,8 +1964,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kube-image-keeper"
+      "matchJsonata": [
+        "depName = 'kube-image-keeper' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.enix.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.enix.io"
@@ -1998,8 +1981,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kube-prometheus-stack"
+      "matchJsonata": [
+        "depName = 'kube-prometheus-stack' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -2015,8 +1998,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kube-state-metrics"
+      "matchJsonata": [
+        "depName = 'kube-state-metrics' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -2032,8 +2015,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kubed"
+      "matchJsonata": [
+        "depName = 'kubed' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.appscode.com/stable']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.appscode.com/stable"
@@ -2049,8 +2032,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kubernetes-dashboard"
+      "matchJsonata": [
+        "depName = 'kubernetes-dashboard' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kubernetes.github.io/dashboard']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kubernetes.github.io/dashboard"
@@ -2066,8 +2049,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kubeshark"
+      "matchJsonata": [
+        "depName = 'kubeshark' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.kubeshark.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.kubeshark.com"
@@ -2083,8 +2066,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kubeview"
+      "matchJsonata": [
+        "depName = 'kubeview' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://code.benco.io/kubeview/deploy/helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://code.benco.io/kubeview/deploy/helm"
@@ -2100,8 +2083,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kured"
+      "matchJsonata": [
+        "depName = 'kured' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kubereboot.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kubereboot.github.io/charts"
@@ -2117,8 +2100,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kyverno"
+      "matchJsonata": [
+        "depName = 'kyverno' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kyverno.github.io/kyverno']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kyverno.github.io/kyverno"
@@ -2134,8 +2117,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "kyverno-policies"
+      "matchJsonata": [
+        "depName = 'kyverno-policies' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kyverno.github.io/kyverno']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kyverno.github.io/kyverno"
@@ -2151,8 +2134,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "langfuse"
+      "matchJsonata": [
+        "depName = 'langfuse' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://langfuse.github.io/langfuse-k8s']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://langfuse.github.io/langfuse-k8s"
@@ -2168,8 +2151,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "linkerd-control-plane"
+      "matchJsonata": [
+        "depName = 'linkerd-control-plane' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.linkerd.io/stable']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.linkerd.io/stable"
@@ -2185,8 +2168,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "linkerd-crds"
+      "matchJsonata": [
+        "depName = 'linkerd-crds' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.linkerd.io/stable']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.linkerd.io/stable"
@@ -2202,8 +2185,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "linkerd-viz"
+      "matchJsonata": [
+        "depName = 'linkerd-viz' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.linkerd.io/stable']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.linkerd.io/stable"
@@ -2219,8 +2202,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "local-path-provisioner"
+      "matchJsonata": [
+        "depName = 'local-path-provisioner' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.containeroo.ch']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.containeroo.ch"
@@ -2236,8 +2219,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "locust"
+      "matchJsonata": [
+        "depName = 'locust' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://raw.githubusercontent.com/deliveryhero/helm-charts/refs/heads/master']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://raw.githubusercontent.com/deliveryhero/helm-charts/refs/heads/master"
@@ -2253,11 +2236,45 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "logstash"
+      "matchJsonata": [
+        "depName = 'logstash' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.elastic.co']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.elastic.co"
+      }
+    },
+    {
+      "description": "Repository URL for loki at https://grafana-community.github.io/helm-charts.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'loki' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://grafana-community.github.io/helm-charts']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://grafana-community.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for loki at https://grafana.github.io/helm-charts.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'loki' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://grafana.github.io/helm-charts']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://grafana.github.io/helm-charts"
       }
     },
     {
@@ -2270,8 +2287,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "longhorn"
+      "matchJsonata": [
+        "depName = 'longhorn' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.longhorn.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.longhorn.io"
@@ -2287,8 +2304,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "mail"
+      "matchJsonata": [
+        "depName = 'mail' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://bokysan.github.io/docker-postfix']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://bokysan.github.io/docker-postfix"
@@ -2304,8 +2321,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "mailhog"
+      "matchJsonata": [
+        "depName = 'mailhog' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://codecentric.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://codecentric.github.io/helm-charts"
@@ -2321,8 +2338,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "mailpit"
+      "matchJsonata": [
+        "depName = 'mailpit' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://jouve.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://jouve.github.io/charts"
@@ -2338,28 +2355,11 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "mailu"
+      "matchJsonata": [
+        "depName = 'mailu' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://mailu.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://mailu.github.io/helm-charts"
-      }
-    },
-    {
-      "description": "Repository URL for mariadb.",
-      "matchManagers": [
-        "helmv3",
-        "argocd",
-        "flux"
-      ],
-      "matchDatasources": [
-        "helm"
-      ],
-      "matchPackageNames": [
-        "mariadb"
-      ],
-      "prBodyDefinitions": {
-        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/mariadb"
       }
     },
     {
@@ -2372,8 +2372,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "mariadb-operator"
+      "matchJsonata": [
+        "depName = 'mariadb-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.mariadb.com/mariadb-operator']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.mariadb.com/mariadb-operator"
@@ -2389,8 +2389,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "matrix-synapse"
+      "matchJsonata": [
+        "depName = 'matrix-synapse' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://ananace.gitlab.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://ananace.gitlab.io/charts"
@@ -2406,8 +2406,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "mattermost-team-edition"
+      "matchJsonata": [
+        "depName = 'mattermost-team-edition' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.mattermost.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.mattermost.com"
@@ -2423,8 +2423,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "meilisearch"
+      "matchJsonata": [
+        "depName = 'meilisearch' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://meilisearch.github.io/meilisearch-kubernetes']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://meilisearch.github.io/meilisearch-kubernetes"
@@ -2440,8 +2440,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "meshery"
+      "matchJsonata": [
+        "depName = 'meshery' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://meshery.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://meshery.io/charts"
@@ -2457,8 +2457,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "metabase"
+      "matchJsonata": [
+        "depName = 'metabase' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://pmint93.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://pmint93.github.io/helm-charts"
@@ -2474,8 +2474,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "metallb"
+      "matchJsonata": [
+        "depName = 'metallb' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://metallb.github.io/metallb']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://metallb.github.io/metallb"
@@ -2491,8 +2491,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "metricbeat"
+      "matchJsonata": [
+        "depName = 'metricbeat' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.elastic.co']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.elastic.co"
@@ -2508,8 +2508,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "metrics-server"
+      "matchJsonata": [
+        "depName = 'metrics-server' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kubernetes-sigs.github.io/metrics-server']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kubernetes-sigs.github.io/metrics-server"
@@ -2525,8 +2525,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "milvus"
+      "matchJsonata": [
+        "depName = 'milvus' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://raw.githubusercontent.com/milvus-io/milvus-helm/gh-pages']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://raw.githubusercontent.com/milvus-io/milvus-helm/gh-pages"
@@ -2542,8 +2542,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "mimir-distributed"
+      "matchJsonata": [
+        "depName = 'mimir-distributed' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://grafana.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://grafana.github.io/helm-charts"
@@ -2559,11 +2559,45 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "minecraft"
+      "matchJsonata": [
+        "depName = 'minecraft' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://itzg.github.io/minecraft-server-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://itzg.github.io/minecraft-server-charts"
+      }
+    },
+    {
+      "description": "Repository URL for minio at https://charts.min.io.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'minio' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.min.io']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.min.io"
+      }
+    },
+    {
+      "description": "Repository URL for minio at https://helm.min.io.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'minio' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.min.io']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://helm.min.io"
       }
     },
     {
@@ -2576,8 +2610,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "mlflow"
+      "matchJsonata": [
+        "depName = 'mlflow' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://community-charts.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://community-charts.github.io/helm-charts"
@@ -2593,28 +2627,11 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "mongo-express"
+      "matchJsonata": [
+        "depName = 'mongo-express' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://cowboysysop.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://cowboysysop.github.io/charts"
-      }
-    },
-    {
-      "description": "Repository URL for mongodb.",
-      "matchManagers": [
-        "helmv3",
-        "argocd",
-        "flux"
-      ],
-      "matchDatasources": [
-        "helm"
-      ],
-      "matchPackageNames": [
-        "mongodb"
-      ],
-      "prBodyDefinitions": {
-        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/mongodb"
       }
     },
     {
@@ -2627,8 +2644,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "mysql"
+      "matchJsonata": [
+        "depName = 'mysql' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.wso2.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.wso2.com"
@@ -2644,11 +2661,28 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "mysql-operator"
+      "matchJsonata": [
+        "depName = 'mysql-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://mysql.github.io/mysql-operator']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://mysql.github.io/mysql-operator"
+      }
+    },
+    {
+      "description": "Repository URL for n8n.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'n8n' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://community-charts.github.io/helm-charts']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://community-charts.github.io/helm-charts"
       }
     },
     {
@@ -2661,8 +2695,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "nacos"
+      "matchJsonata": [
+        "depName = 'nacos' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://ygqygq2.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://ygqygq2.github.io/charts"
@@ -2678,11 +2712,45 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "nats"
+      "matchJsonata": [
+        "depName = 'nats' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://nats-io.github.io/k8s/helm/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://nats-io.github.io/k8s/helm/charts"
+      }
+    },
+    {
+      "description": "Repository URL for netbox at https://charts.boo.tc.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'netbox' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.boo.tc']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.boo.tc"
+      }
+    },
+    {
+      "description": "Repository URL for netbox at https://charts.netbox.oss.netboxlabs.com.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'netbox' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.netbox.oss.netboxlabs.com']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.netbox.oss.netboxlabs.com"
       }
     },
     {
@@ -2695,8 +2763,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "netdata"
+      "matchJsonata": [
+        "depName = 'netdata' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://netdata.github.io/helmchart']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://netdata.github.io/helmchart"
@@ -2712,8 +2780,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "nextcloud"
+      "matchJsonata": [
+        "depName = 'nextcloud' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://nextcloud.github.io/helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://nextcloud.github.io/helm"
@@ -2729,8 +2797,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "nexus3"
+      "matchJsonata": [
+        "depName = 'nexus3' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://stevehipwell.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://stevehipwell.github.io/helm-charts"
@@ -2746,8 +2814,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "nfs-server-provisioner"
+      "matchJsonata": [
+        "depName = 'nfs-server-provisioner' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kvaps.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kvaps.github.io/charts"
@@ -2763,28 +2831,11 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "nfs-subdir-external-provisioner"
+      "matchJsonata": [
+        "depName = 'nfs-subdir-external-provisioner' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner"
-      }
-    },
-    {
-      "description": "Repository URL for nginx-gateway-fabric.",
-      "matchManagers": [
-        "helmv3",
-        "argocd",
-        "flux"
-      ],
-      "matchDatasources": [
-        "helm"
-      ],
-      "matchPackageNames": [
-        "nginx-gateway-fabric"
-      ],
-      "prBodyDefinitions": {
-        "stageproofRegistry": "oci://ghcr.io/nginx/charts/nginx-gateway-fabric"
       }
     },
     {
@@ -2797,8 +2848,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "nginx-ingress"
+      "matchJsonata": [
+        "depName = 'nginx-ingress' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.nginx.com/stable']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.nginx.com/stable"
@@ -2814,8 +2865,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "nifi"
+      "matchJsonata": [
+        "depName = 'nifi' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://cetic.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://cetic.github.io/helm-charts"
@@ -2831,8 +2882,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "node-local-dns"
+      "matchJsonata": [
+        "depName = 'node-local-dns' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://raw.githubusercontent.com/deliveryhero/helm-charts/refs/heads/master']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://raw.githubusercontent.com/deliveryhero/helm-charts/refs/heads/master"
@@ -2848,8 +2899,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "node-problem-detector"
+      "matchJsonata": [
+        "depName = 'node-problem-detector' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://raw.githubusercontent.com/deliveryhero/helm-charts/refs/heads/master']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://raw.githubusercontent.com/deliveryhero/helm-charts/refs/heads/master"
@@ -2865,8 +2916,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "node-red"
+      "matchJsonata": [
+        "depName = 'node-red' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://schwarzit.github.io/node-red-chart']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://schwarzit.github.io/node-red-chart"
@@ -2882,8 +2933,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "nxrm-ha"
+      "matchJsonata": [
+        "depName = 'nxrm-ha' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://sonatype.github.io/helm3-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://sonatype.github.io/helm3-charts"
@@ -2899,8 +2950,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "oauth2-proxy"
+      "matchJsonata": [
+        "depName = 'oauth2-proxy' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://oauth2-proxy.github.io/manifests']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://oauth2-proxy.github.io/manifests"
@@ -2916,8 +2967,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "okteto"
+      "matchJsonata": [
+        "depName = 'okteto' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.okteto.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.okteto.com"
@@ -2933,8 +2984,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "ollama"
+      "matchJsonata": [
+        "depName = 'ollama' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://otwld.github.io/ollama-helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://otwld.github.io/ollama-helm"
@@ -2950,8 +3001,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "open-webui"
+      "matchJsonata": [
+        "depName = 'open-webui' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.openwebui.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.openwebui.com"
@@ -2967,8 +3018,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "openbao"
+      "matchJsonata": [
+        "depName = 'openbao' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://openbao.github.io/openbao-helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://openbao.github.io/openbao-helm"
@@ -2984,8 +3035,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "opencost"
+      "matchJsonata": [
+        "depName = 'opencost' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://opencost.github.io/opencost-helm-chart']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://opencost.github.io/opencost-helm-chart"
@@ -3001,8 +3052,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "openebs"
+      "matchJsonata": [
+        "depName = 'openebs' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://openebs.github.io/openebs']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://openebs.github.io/openebs"
@@ -3018,8 +3069,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "openfaas"
+      "matchJsonata": [
+        "depName = 'openfaas' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://openfaas.github.io/faas-netes']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://openfaas.github.io/faas-netes"
@@ -3035,8 +3086,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "openfga"
+      "matchJsonata": [
+        "depName = 'openfga' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://openfga.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://openfga.github.io/helm-charts"
@@ -3052,8 +3103,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "openldap-stack-ha"
+      "matchJsonata": [
+        "depName = 'openldap-stack-ha' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://jp-gouin.github.io/helm-openldap']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://jp-gouin.github.io/helm-openldap"
@@ -3069,8 +3120,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "openmetadata"
+      "matchJsonata": [
+        "depName = 'openmetadata' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.open-metadata.org']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.open-metadata.org"
@@ -3086,8 +3137,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "openproject"
+      "matchJsonata": [
+        "depName = 'openproject' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.openproject.org']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.openproject.org"
@@ -3103,8 +3154,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "opensearch"
+      "matchJsonata": [
+        "depName = 'opensearch' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://opensearch-project.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://opensearch-project.github.io/helm-charts"
@@ -3120,8 +3171,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "opensearch-dashboards"
+      "matchJsonata": [
+        "depName = 'opensearch-dashboards' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://opensearch-project.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://opensearch-project.github.io/helm-charts"
@@ -3137,8 +3188,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "opensearch-operator"
+      "matchJsonata": [
+        "depName = 'opensearch-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://opensearch-project.github.io/opensearch-k8s-operator']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://opensearch-project.github.io/opensearch-k8s-operator"
@@ -3154,8 +3205,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "opentelemetry-collector"
+      "matchJsonata": [
+        "depName = 'opentelemetry-collector' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://open-telemetry.github.io/opentelemetry-helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://open-telemetry.github.io/opentelemetry-helm-charts"
@@ -3171,8 +3222,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "opentelemetry-operator"
+      "matchJsonata": [
+        "depName = 'opentelemetry-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://open-telemetry.github.io/opentelemetry-helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://open-telemetry.github.io/opentelemetry-helm-charts"
@@ -3188,8 +3239,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "operator"
+      "matchJsonata": [
+        "depName = 'operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://operator.min.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://operator.min.io"
@@ -3205,8 +3256,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "outline"
+      "matchJsonata": [
+        "depName = 'outline' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://community-charts.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://community-charts.github.io/helm-charts"
@@ -3222,8 +3273,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "penpot"
+      "matchJsonata": [
+        "depName = 'penpot' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.penpot.app']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.penpot.app"
@@ -3239,8 +3290,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "pgadmin4"
+      "matchJsonata": [
+        "depName = 'pgadmin4' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.runix.net']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.runix.net"
@@ -3256,8 +3307,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "pihole"
+      "matchJsonata": [
+        "depName = 'pihole' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://mojo2600.github.io/pihole-kubernetes']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://mojo2600.github.io/pihole-kubernetes"
@@ -3273,8 +3324,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "plantuml"
+      "matchJsonata": [
+        "depName = 'plantuml' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://stevehipwell.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://stevehipwell.github.io/helm-charts"
@@ -3290,8 +3341,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "podinfo"
+      "matchJsonata": [
+        "depName = 'podinfo' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://stefanprodan.github.io/podinfo']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://stefanprodan.github.io/podinfo"
@@ -3307,8 +3358,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "polaris"
+      "matchJsonata": [
+        "depName = 'polaris' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.fairwinds.com/stable']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.fairwinds.com/stable"
@@ -3324,8 +3375,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "policy-reporter"
+      "matchJsonata": [
+        "depName = 'policy-reporter' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kyverno.github.io/policy-reporter']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kyverno.github.io/policy-reporter"
@@ -3341,11 +3392,28 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "portainer"
+      "matchJsonata": [
+        "depName = 'portainer' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://portainer.github.io/k8s']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://portainer.github.io/k8s"
+      }
+    },
+    {
+      "description": "Repository URL for postgres.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'postgres' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://groundhog2k.github.io/helm-charts']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://groundhog2k.github.io/helm-charts"
       }
     },
     {
@@ -3358,8 +3426,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "prometheus"
+      "matchJsonata": [
+        "depName = 'prometheus' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -3375,8 +3443,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "prometheus-adapter"
+      "matchJsonata": [
+        "depName = 'prometheus-adapter' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -3392,8 +3460,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "prometheus-blackbox-exporter"
+      "matchJsonata": [
+        "depName = 'prometheus-blackbox-exporter' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -3409,8 +3477,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "prometheus-elasticsearch-exporter"
+      "matchJsonata": [
+        "depName = 'prometheus-elasticsearch-exporter' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -3426,8 +3494,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "prometheus-kafka-exporter"
+      "matchJsonata": [
+        "depName = 'prometheus-kafka-exporter' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -3443,8 +3511,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "prometheus-mongodb-exporter"
+      "matchJsonata": [
+        "depName = 'prometheus-mongodb-exporter' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -3460,8 +3528,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "prometheus-mysql-exporter"
+      "matchJsonata": [
+        "depName = 'prometheus-mysql-exporter' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -3477,8 +3545,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "prometheus-node-exporter"
+      "matchJsonata": [
+        "depName = 'prometheus-node-exporter' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -3494,8 +3562,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "prometheus-operator-crds"
+      "matchJsonata": [
+        "depName = 'prometheus-operator-crds' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -3511,8 +3579,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "prometheus-postgres-exporter"
+      "matchJsonata": [
+        "depName = 'prometheus-postgres-exporter' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -3528,8 +3596,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "prometheus-pushgateway"
+      "matchJsonata": [
+        "depName = 'prometheus-pushgateway' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -3545,8 +3613,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "prometheus-redis-exporter"
+      "matchJsonata": [
+        "depName = 'prometheus-redis-exporter' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://prometheus-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://prometheus-community.github.io/helm-charts"
@@ -3562,8 +3630,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "pulsar"
+      "matchJsonata": [
+        "depName = 'pulsar' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://pulsar.apache.org/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://pulsar.apache.org/charts"
@@ -3579,8 +3647,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "pxc-operator"
+      "matchJsonata": [
+        "depName = 'pxc-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://percona.github.io/percona-helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://percona.github.io/percona-helm-charts"
@@ -3596,8 +3664,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "pyroscope"
+      "matchJsonata": [
+        "depName = 'pyroscope' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://grafana.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://grafana.github.io/helm-charts"
@@ -3613,15 +3681,15 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "qdrant"
+      "matchJsonata": [
+        "depName = 'qdrant' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://qdrant.github.io/qdrant-helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://qdrant.github.io/qdrant-helm"
       }
     },
     {
-      "description": "Repository URL for rabbitmq.",
+      "description": "Repository URL for rancher at https://releases.rancher.com/server-charts/latest.",
       "matchManagers": [
         "helmv3",
         "argocd",
@@ -3630,11 +3698,28 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "rabbitmq"
+      "matchJsonata": [
+        "depName = 'rancher' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://releases.rancher.com/server-charts/latest']) > 0"
       ],
       "prBodyDefinitions": {
-        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/rabbitmq"
+        "stageproofRegistry": "https://releases.rancher.com/server-charts/latest"
+      }
+    },
+    {
+      "description": "Repository URL for rancher at https://releases.rancher.com/server-charts/stable.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'rancher' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://releases.rancher.com/server-charts/stable']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://releases.rancher.com/server-charts/stable"
       }
     },
     {
@@ -3647,28 +3732,11 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "rbac-manager"
+      "matchJsonata": [
+        "depName = 'rbac-manager' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.fairwinds.com/stable']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.fairwinds.com/stable"
-      }
-    },
-    {
-      "description": "Repository URL for redis.",
-      "matchManagers": [
-        "helmv3",
-        "argocd",
-        "flux"
-      ],
-      "matchDatasources": [
-        "helm"
-      ],
-      "matchPackageNames": [
-        "redis"
-      ],
-      "prBodyDefinitions": {
-        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/redis"
       }
     },
     {
@@ -3681,8 +3749,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "redis-ha"
+      "matchJsonata": [
+        "depName = 'redis-ha' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://dandydeveloper.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://dandydeveloper.github.io/charts"
@@ -3698,8 +3766,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "redpanda"
+      "matchJsonata": [
+        "depName = 'redpanda' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.redpanda.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.redpanda.com"
@@ -3715,8 +3783,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "reflector"
+      "matchJsonata": [
+        "depName = 'reflector' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://emberstack.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://emberstack.github.io/helm-charts"
@@ -3732,28 +3800,11 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "reloader"
+      "matchJsonata": [
+        "depName = 'reloader' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://stakater.github.io/stakater-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://stakater.github.io/stakater-charts"
-      }
-    },
-    {
-      "description": "Repository URL for renovate.",
-      "matchManagers": [
-        "helmv3",
-        "argocd",
-        "flux"
-      ],
-      "matchDatasources": [
-        "helm"
-      ],
-      "matchPackageNames": [
-        "renovate"
-      ],
-      "prBodyDefinitions": {
-        "stageproofRegistry": "oci://ghcr.io/renovatebot/charts/renovate"
       }
     },
     {
@@ -3766,8 +3817,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "rocketchat"
+      "matchJsonata": [
+        "depName = 'rocketchat' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://rocketchat.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://rocketchat.github.io/helm-charts"
@@ -3783,8 +3834,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "rook-ceph"
+      "matchJsonata": [
+        "depName = 'rook-ceph' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.rook.io/release']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.rook.io/release"
@@ -3800,8 +3851,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "rook-ceph-cluster"
+      "matchJsonata": [
+        "depName = 'rook-ceph-cluster' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.rook.io/release']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.rook.io/release"
@@ -3817,8 +3868,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "rundeck"
+      "matchJsonata": [
+        "depName = 'rundeck' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://eugenmayer.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://eugenmayer.github.io/helm-charts"
@@ -3834,8 +3885,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "rustfs"
+      "matchJsonata": [
+        "depName = 'rustfs' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.rustfs.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.rustfs.com"
@@ -3851,8 +3902,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "sealed-secrets"
+      "matchJsonata": [
+        "depName = 'sealed-secrets' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://bitnami-labs.github.io/sealed-secrets']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://bitnami-labs.github.io/sealed-secrets"
@@ -3868,8 +3919,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "seaweedfs"
+      "matchJsonata": [
+        "depName = 'seaweedfs' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://seaweedfs.github.io/seaweedfs/helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://seaweedfs.github.io/seaweedfs/helm"
@@ -3885,8 +3936,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "secrets-store-csi-driver"
+      "matchJsonata": [
+        "depName = 'secrets-store-csi-driver' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts"
@@ -3902,8 +3953,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "semaphore"
+      "matchJsonata": [
+        "depName = 'semaphore' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://semaphoreui.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://semaphoreui.github.io/charts"
@@ -3919,8 +3970,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "signoz"
+      "matchJsonata": [
+        "depName = 'signoz' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.signoz.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.signoz.io"
@@ -3936,8 +3987,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "snapshot-controller"
+      "matchJsonata": [
+        "depName = 'snapshot-controller' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://piraeus.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://piraeus.io/helm-charts"
@@ -3953,8 +4004,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "solr"
+      "matchJsonata": [
+        "depName = 'solr' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://solr.apache.org/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://solr.apache.org/charts"
@@ -3970,8 +4021,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "solr-operator"
+      "matchJsonata": [
+        "depName = 'solr-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://solr.apache.org/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://solr.apache.org/charts"
@@ -3987,8 +4038,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "sonarqube"
+      "matchJsonata": [
+        "depName = 'sonarqube' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://SonarSource.github.io/helm-chart-sonarqube']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://SonarSource.github.io/helm-chart-sonarqube"
@@ -4004,8 +4055,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "spinnaker"
+      "matchJsonata": [
+        "depName = 'spinnaker' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helmcharts.opsmx.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helmcharts.opsmx.com"
@@ -4021,8 +4072,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "stackgres-operator"
+      "matchJsonata": [
+        "depName = 'stackgres-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://stackgres.io/downloads/stackgres-k8s/stackgres/helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://stackgres.io/downloads/stackgres-k8s/stackgres/helm"
@@ -4038,8 +4089,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "stacks-blockchain"
+      "matchJsonata": [
+        "depName = 'stacks-blockchain' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.hiro.so/hirosystems']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.hiro.so/hirosystems"
@@ -4055,11 +4106,28 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "step-certificates"
+      "matchJsonata": [
+        "depName = 'step-certificates' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://smallstep.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://smallstep.github.io/helm-charts"
+      }
+    },
+    {
+      "description": "Repository URL for strimzi-kafka-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'strimzi-kafka-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://strimzi.io/charts']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://strimzi.io/charts"
       }
     },
     {
@@ -4072,8 +4140,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "sumologic"
+      "matchJsonata": [
+        "depName = 'sumologic' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://sumologic.github.io/sumologic-kubernetes-collection']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://sumologic.github.io/sumologic-kubernetes-collection"
@@ -4089,8 +4157,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "teleport-cluster"
+      "matchJsonata": [
+        "depName = 'teleport-cluster' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.releases.teleport.dev']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.releases.teleport.dev"
@@ -4106,8 +4174,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "tempo"
+      "matchJsonata": [
+        "depName = 'tempo' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://grafana-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://grafana-community.github.io/helm-charts"
@@ -4123,8 +4191,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "tempo-distributed"
+      "matchJsonata": [
+        "depName = 'tempo-distributed' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://grafana-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://grafana-community.github.io/helm-charts"
@@ -4140,8 +4208,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "terraform"
+      "matchJsonata": [
+        "depName = 'terraform' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.releases.hashicorp.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.releases.hashicorp.com"
@@ -4157,8 +4225,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "tetragon"
+      "matchJsonata": [
+        "depName = 'tetragon' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.cilium.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.cilium.io"
@@ -4174,8 +4242,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "thanos"
+      "matchJsonata": [
+        "depName = 'thanos' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://thanos-community.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://thanos-community.github.io/helm-charts"
@@ -4191,8 +4259,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "tigera-operator"
+      "matchJsonata": [
+        "depName = 'tigera-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://docs.projectcalico.org/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://docs.projectcalico.org/charts"
@@ -4208,8 +4276,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "traefik"
+      "matchJsonata": [
+        "depName = 'traefik' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://traefik.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://traefik.github.io/charts"
@@ -4225,8 +4293,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "trino"
+      "matchJsonata": [
+        "depName = 'trino' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://trinodb.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://trinodb.github.io/charts"
@@ -4242,8 +4310,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "trivy-operator"
+      "matchJsonata": [
+        "depName = 'trivy-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://aquasecurity.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://aquasecurity.github.io/helm-charts"
@@ -4259,8 +4327,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "trust-manager"
+      "matchJsonata": [
+        "depName = 'trust-manager' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.jetstack.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.jetstack.io"
@@ -4276,8 +4344,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "unleash"
+      "matchJsonata": [
+        "depName = 'unleash' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://docs.getunleash.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://docs.getunleash.io/helm-charts"
@@ -4293,11 +4361,28 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "uptime-kuma"
+      "matchJsonata": [
+        "depName = 'uptime-kuma' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://dirsigler.github.io/uptime-kuma-helm']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://dirsigler.github.io/uptime-kuma-helm"
+      }
+    },
+    {
+      "description": "Repository URL for valkey.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'valkey' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://valkey.io/valkey-helm']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://valkey.io/valkey-helm"
       }
     },
     {
@@ -4310,8 +4395,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "vault"
+      "matchJsonata": [
+        "depName = 'vault' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.releases.hashicorp.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.releases.hashicorp.com"
@@ -4327,11 +4412,62 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "vault-secrets-operator"
+      "matchJsonata": [
+        "depName = 'vault-secrets-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.releases.hashicorp.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.releases.hashicorp.com"
+      }
+    },
+    {
+      "description": "Repository URL for vaultwarden at https://charts.gabe565.com.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'vaultwarden' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.gabe565.com']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://charts.gabe565.com"
+      }
+    },
+    {
+      "description": "Repository URL for vaultwarden at https://gissilabs.github.io/charts.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'vaultwarden' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://gissilabs.github.io/charts']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://gissilabs.github.io/charts"
+      }
+    },
+    {
+      "description": "Repository URL for vaultwarden at https://guerzon.github.io/vaultwarden.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "helm"
+      ],
+      "matchJsonata": [
+        "depName = 'vaultwarden' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://guerzon.github.io/vaultwarden']) > 0"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "https://guerzon.github.io/vaultwarden"
       }
     },
     {
@@ -4344,8 +4480,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "vcluster"
+      "matchJsonata": [
+        "depName = 'vcluster' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.loft.sh']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.loft.sh"
@@ -4361,8 +4497,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "vector"
+      "matchJsonata": [
+        "depName = 'vector' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.vector.dev']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.vector.dev"
@@ -4378,8 +4514,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "velero"
+      "matchJsonata": [
+        "depName = 'velero' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://vmware-tanzu.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://vmware-tanzu.github.io/helm-charts"
@@ -4395,8 +4531,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "verdaccio"
+      "matchJsonata": [
+        "depName = 'verdaccio' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.verdaccio.org']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.verdaccio.org"
@@ -4412,8 +4548,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "vertical-pod-autoscaler"
+      "matchJsonata": [
+        "depName = 'vertical-pod-autoscaler' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://cowboysysop.github.io/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://cowboysysop.github.io/charts"
@@ -4429,8 +4565,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "victoria-logs-single"
+      "matchJsonata": [
+        "depName = 'victoria-logs-single' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://victoriametrics.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://victoriametrics.github.io/helm-charts"
@@ -4446,8 +4582,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "victoria-metrics-cluster"
+      "matchJsonata": [
+        "depName = 'victoria-metrics-cluster' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://victoriametrics.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://victoriametrics.github.io/helm-charts"
@@ -4463,8 +4599,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "victoria-metrics-k8s-stack"
+      "matchJsonata": [
+        "depName = 'victoria-metrics-k8s-stack' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://victoriametrics.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://victoriametrics.github.io/helm-charts"
@@ -4480,8 +4616,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "victoria-metrics-operator"
+      "matchJsonata": [
+        "depName = 'victoria-metrics-operator' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://victoriametrics.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://victoriametrics.github.io/helm-charts"
@@ -4497,8 +4633,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "victoria-metrics-single"
+      "matchJsonata": [
+        "depName = 'victoria-metrics-single' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://victoriametrics.github.io/helm-charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://victoriametrics.github.io/helm-charts"
@@ -4514,8 +4650,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "vpa"
+      "matchJsonata": [
+        "depName = 'vpa' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.fairwinds.com/stable']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.fairwinds.com/stable"
@@ -4531,8 +4667,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "weblate"
+      "matchJsonata": [
+        "depName = 'weblate' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://helm.weblate.org']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://helm.weblate.org"
@@ -4548,8 +4684,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "x509-certificate-exporter"
+      "matchJsonata": [
+        "depName = 'x509-certificate-exporter' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.enix.io']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.enix.io"
@@ -4565,8 +4701,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "yourls"
+      "matchJsonata": [
+        "depName = 'yourls' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.yourls.org']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.yourls.org"
@@ -4582,28 +4718,11 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "zabbix"
+      "matchJsonata": [
+        "depName = 'zabbix' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://zabbix-community.github.io/helm-zabbix']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://zabbix-community.github.io/helm-zabbix"
-      }
-    },
-    {
-      "description": "Repository URL for zammad.",
-      "matchManagers": [
-        "helmv3",
-        "argocd",
-        "flux"
-      ],
-      "matchDatasources": [
-        "helm"
-      ],
-      "matchPackageNames": [
-        "zammad"
-      ],
-      "prBodyDefinitions": {
-        "stageproofRegistry": "oci://ghcr.io/zammad/charts/zammad"
       }
     },
     {
@@ -4616,8 +4735,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "zitadel"
+      "matchJsonata": [
+        "depName = 'zitadel' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://charts.zitadel.com']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://charts.zitadel.com"
@@ -4633,8 +4752,8 @@
       "matchDatasources": [
         "helm"
       ],
-      "matchPackageNames": [
-        "ztunnel"
+      "matchJsonata": [
+        "depName = 'ztunnel' and $count(registryUrls[$replace($, /\\/+$/, '') = 'https://istio-release.storage.googleapis.com/charts']) > 0"
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://istio-release.storage.googleapis.com/charts"
