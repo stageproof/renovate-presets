@@ -16,7 +16,7 @@ jobs:
 
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
-          node-version: 22
+          node-version: 24
 
       - name: Validate presets
-        run: npx --yes --package renovate@39.264.0 renovate-config-validator --strict default.json automerge-patch.json
+        run: npx --yes --package renovate@44.263.1 renovate-config-validator --strict default.json automerge-patch.json
