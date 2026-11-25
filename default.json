@@ -17,6 +17,20 @@
       ]
     },
     {
+      "description": "Add the Stageproof index badge to OCI Helm pull requests.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "prBodyNotes": [
+        "![stageproof](https://stageproof-index-badges.stageproof.workers.dev/badge.svg?chart={{encodeURIComponent depName}}&from={{encodeURIComponent currentVersion}}&registry={{#if prBodyDefinitions.stageproofRegistry}}{{encodeURIComponent prBodyDefinitions.stageproofRegistry}}{{/if}}&to={{encodeURIComponent newVersion}})"
+      ]
+    },
+    {
       "description": "Repository URL for actions-runner-controller.",
       "matchManagers": [
         "helmv3",
@@ -4757,6 +4771,363 @@
       ],
       "prBodyDefinitions": {
         "stageproofRegistry": "https://istio-release.storage.googleapis.com/charts"
+      }
+    },
+    {
+      "description": "OCI repository URL for argo-cd.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "ghcr.io/argoproj/argo-helm/argo-cd"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/argoproj/argo-helm/argo-cd"
+      }
+    },
+    {
+      "description": "OCI repository URL for backstage.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "ghcr.io/backstage/charts/backstage"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/backstage/charts/backstage"
+      }
+    },
+    {
+      "description": "OCI repository URL for dex.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "ghcr.io/dexidp/helm-charts/dex"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/dexidp/helm-charts/dex"
+      }
+    },
+    {
+      "description": "OCI repository URL for forgejo.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "code.forgejo.org/forgejo-helm/forgejo"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://code.forgejo.org/forgejo-helm/forgejo"
+      }
+    },
+    {
+      "description": "OCI repository URL for forgejo-runner.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "codeberg.org/wrenix/helm-charts/forgejo-runner"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://codeberg.org/wrenix/helm-charts/forgejo-runner"
+      }
+    },
+    {
+      "description": "OCI repository URL for gitops-runtime.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "quay.io/codefresh/gitops-runtime"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://quay.io/codefresh/gitops-runtime"
+      }
+    },
+    {
+      "description": "OCI repository URL for immich.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "ghcr.io/immich-app/immich-charts/immich"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/immich-app/immich-charts/immich"
+      }
+    },
+    {
+      "description": "OCI repository URL for karpenter.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "public.ecr.aws/karpenter/karpenter"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://public.ecr.aws/karpenter/karpenter"
+      }
+    },
+    {
+      "description": "OCI repository URL for keycloak.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "registry-1.docker.io/cloudpirates/keycloak"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/keycloak"
+      }
+    },
+    {
+      "description": "OCI repository URL for mariadb.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "registry-1.docker.io/cloudpirates/mariadb"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/mariadb"
+      }
+    },
+    {
+      "description": "OCI repository URL for minio.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "registry-1.docker.io/cloudpirates/minio"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/minio"
+      }
+    },
+    {
+      "description": "OCI repository URL for mongodb.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "registry-1.docker.io/cloudpirates/mongodb"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/mongodb"
+      }
+    },
+    {
+      "description": "OCI repository URL for n8n.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "8gears.container-registry.com/library/n8n"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://8gears.container-registry.com/library/n8n"
+      }
+    },
+    {
+      "description": "OCI repository URL for nginx-gateway-fabric.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "ghcr.io/nginx/charts/nginx-gateway-fabric"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/nginx/charts/nginx-gateway-fabric"
+      }
+    },
+    {
+      "description": "OCI repository URL for postgres.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "registry-1.docker.io/cloudpirates/postgres"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/postgres"
+      }
+    },
+    {
+      "description": "OCI repository URL for rabbitmq.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "registry-1.docker.io/cloudpirates/rabbitmq"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/rabbitmq"
+      }
+    },
+    {
+      "description": "OCI repository URL for redis.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "registry-1.docker.io/cloudpirates/redis"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/redis"
+      }
+    },
+    {
+      "description": "OCI repository URL for renovate.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "ghcr.io/renovatebot/charts/renovate"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/renovatebot/charts/renovate"
+      }
+    },
+    {
+      "description": "OCI repository URL for strimzi-kafka-operator.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "quay.io/strimzi-helm/strimzi-kafka-operator"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://quay.io/strimzi-helm/strimzi-kafka-operator"
+      }
+    },
+    {
+      "description": "OCI repository URL for valkey.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "registry-1.docker.io/cloudpirates/valkey"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://registry-1.docker.io/cloudpirates/valkey"
+      }
+    },
+    {
+      "description": "OCI repository URL for zammad.",
+      "matchManagers": [
+        "helmv3",
+        "argocd",
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "ghcr.io/zammad/charts/zammad"
+      ],
+      "prBodyDefinitions": {
+        "stageproofRegistry": "oci://ghcr.io/zammad/charts/zammad"
       }
     }
   ]
