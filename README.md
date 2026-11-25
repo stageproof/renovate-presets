@@ -20,7 +20,7 @@ The preset adds one image to pull requests from the `helmv3`, `argocd`, and `flu
 https://stageproof-index-badges.stageproof.workers.dev/badge.svg?chart={{{depName}}}&from={{{currentVersion}}}&registry={{{prBodyDefinitions.stageproofRegistry}}}&to={{{newVersion}}}
 ```
 
-`chart` is the Helm chart name. On Renovate 39.264.0 that name is `depName` for an HTTP Helm chart. `registry` comes from `prBodyDefinitions`, because that Renovate version rejects `registryUrl` in a template.
+`chart` is the Helm chart name. On Renovate 44.263.1 that name is `depName` for an HTTP Helm chart, as it was on 39.264.0. `registry` comes from `prBodyDefinitions`.
 
 `default.json` assigns a repository URL when the chart name appears once in the index catalog of 300 charts on 2026-11-24. These names appear more than once, so they have no repository in the preset: `airflow`, `argo-cd`, `dify`, `keycloak`, `loki`, `minio`, `n8n`, `netbox`, `postgres`, `rancher`, `strimzi-kafka-operator`, `valkey`, `vaultwarden`.
 
