@@ -14,7 +14,7 @@ The preset files are Apache-2.0. See [LICENSE](LICENSE).
 }
 ```
 
-The preset adds one image to pull requests from the `helmv3`, `argocd`, and `flux` managers when the datasource is `helm`:
+The preset adds one image to pull requests from the `helmv3`, `argocd`, and `flux` managers when the datasource is `helm` or `docker`:
 
 ```text
 https://stageproof-index-badges.stageproof.workers.dev/badge.svg?chart={{encodeURIComponent depName}}&from={{encodeURIComponent currentVersion}}&registry={{#if prBodyDefinitions.stageproofRegistry}}{{encodeURIComponent prBodyDefinitions.stageproofRegistry}}{{/if}}&to={{encodeURIComponent newVersion}}
@@ -22,7 +22,7 @@ https://stageproof-index-badges.stageproof.workers.dev/badge.svg?chart={{encodeU
 
 `chart` is the Helm chart name. On Renovate 44.263.1 that name is `depName` for an HTTP Helm chart, as it was on 39.264.0. `registry` comes from `prBodyDefinitions`. Renovate 39.264.0 and 44.263.1 both provide `encodeURIComponent`. The chart name, both versions, and the registry are encoded. When no registry was assigned, that query value stays empty.
 
-`default.json` assigns a repository URL when the chart name and the Helm registry both match an HTTP chart in the index catalog of 300 charts. A trailing slash on the registry is ignored. These names occur in more than one repository, so the registry chooses the URL: `airflow`, `argo-cd`, `dify`, `keycloak`, `loki`, `minio`, `n8n`, `netbox`, `postgres`, `rancher`, `strimzi-kafka-operator`, `valkey`, `vaultwarden`. OCI charts are not assigned here.
+`default.json` assigns a repository URL when the chart name and the Helm registry both match an HTTP chart in the index catalog of 300 charts. A trailing slash on the registry is ignored. These names occur in more than one repository, so the registry chooses the URL: `airflow`, `argo-cd`, `dify`, `keycloak`, `loki`, `minio`, `n8n`, `netbox`, `postgres`, `rancher`, `strimzi-kafka-operator`, `valkey`, `vaultwarden`. An OCI chart is matched by its Docker `packageName`, which is the catalog URL without the `oci://` prefix. The badge registry is that full `oci://` URL. Those 21 keys are already in the published `registries.json`.
 
 The SVG files are published with the index site. GitHub Pages returns HTTP 404 for `/badge.svg`. The worker at `https://stageproof-index-badges.stageproof.workers.dev` answers that query with HTTP 200. It answers `not indexed` when the pair is absent, and also when the nightly site has not published that SVG yet.
 
