@@ -13,7 +13,7 @@
         "helm"
       ],
       "prBodyNotes": [
-        "![stageproof](https://stageproof-index-badges.stageproof.workers.dev/badge.svg?chart={{{depName}}}&from={{{currentVersion}}}&registry={{{prBodyDefinitions.stageproofRegistry}}}&to={{{newVersion}}})"
+        "![stageproof](https://stageproof-index-badges.stageproof.workers.dev/badge.svg?chart={{encodeURIComponent depName}}&from={{encodeURIComponent currentVersion}}&registry={{#if prBodyDefinitions.stageproofRegistry}}{{encodeURIComponent prBodyDefinitions.stageproofRegistry}}{{/if}}&to={{encodeURIComponent newVersion}})"
       ]
     },
     {
