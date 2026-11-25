@@ -22,7 +22,7 @@ https://stageproof-index-badges.stageproof.workers.dev/badge.svg?chart={{{depNam
 
 `chart` is the Helm chart name. On Renovate 44.263.1 that name is `depName` for an HTTP Helm chart, as it was on 39.264.0. `registry` comes from `prBodyDefinitions`.
 
-`default.json` assigns a repository URL when the chart name appears once in the index catalog of 300 charts on 2026-11-24. These names appear more than once, so they have no repository in the preset: `airflow`, `argo-cd`, `dify`, `keycloak`, `loki`, `minio`, `n8n`, `netbox`, `postgres`, `rancher`, `strimzi-kafka-operator`, `valkey`, `vaultwarden`.
+`default.json` assigns a repository URL when the chart name and the Helm registry both match an HTTP chart in the index catalog of 300 charts. A trailing slash on the registry is ignored. These names occur in more than one repository, so the registry chooses the URL: `airflow`, `argo-cd`, `dify`, `keycloak`, `loki`, `minio`, `n8n`, `netbox`, `postgres`, `rancher`, `strimzi-kafka-operator`, `valkey`, `vaultwarden`. OCI charts are not assigned here.
 
 The SVG files are published with the index site. GitHub Pages returns HTTP 404 for `/badge.svg`. The worker at `https://stageproof-index-badges.stageproof.workers.dev` answers that query with HTTP 200. It answers `not indexed` when the pair is absent, and also when the nightly site has not published that SVG yet.
 
