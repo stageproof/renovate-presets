@@ -4,6 +4,8 @@ Renovate presets for the Stageproof index badge.
 
 The badge states a chart-defaults report. The text is `no blocking finding (defaults)`, `not checked`, `not indexed`, or the blocking finding. Run Stageproof with your values files before you treat a result as a check of your cluster.
 
+The preset files are Apache-2.0. See [LICENSE](LICENSE).
+
 ## Badge preset
 
 ```json
