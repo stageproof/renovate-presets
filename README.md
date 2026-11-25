@@ -2,9 +2,9 @@
 
 Renovate presets for the Stageproof index badge.
 
-The badge states a chart-defaults report. The text is `no blocking finding (defaults)`, `not checked`, `not indexed`, or the blocking finding. Run Stageproof with your values files before you treat a result as a check of your cluster.
+The badge states a chart-defaults report. The text is `no blocking finding (defaults)`, `not checked`, `not indexed`, `pair not indexed`, or the blocking finding. `not indexed` means the chart is not in the catalog. `pair not indexed` means the chart is listed and that exact upgrade is not stored. Run Stageproof with your values files before you treat a result as a check of your cluster.
 
-The preset files are Apache-2.0. See [LICENSE](LICENSE).
+The preset files are Apache-2.0. See [LICENSE](LICENSE). Security reports go to [stageproof/stageproof](https://github.com/stageproof/stageproof/security). See [SECURITY.md](SECURITY.md).
 
 ## Badge preset
 
@@ -24,7 +24,7 @@ https://stageproof-index-badges.stageproof.workers.dev/badge.svg?chart={{encodeU
 
 `default.json` was generated from `charts.yaml` in [stageproof/index](https://github.com/stageproof/index) at `365706d1` (`go run ./cmd/presets -charts charts.yaml -o default.json`). Regenerate it when that catalog changes. It assigns a repository URL when the chart name and the Helm registry both match an HTTP chart in the index catalog of 300 charts. A trailing slash on the registry is ignored. These names occur in more than one repository, so the registry chooses the URL: `airflow`, `argo-cd`, `dify`, `keycloak`, `loki`, `minio`, `n8n`, `netbox`, `postgres`, `rancher`, `strimzi-kafka-operator`, `valkey`, `vaultwarden`. An OCI chart is matched by its Docker `packageName`, which is the catalog URL without the `oci://` prefix. The badge registry is that full `oci://` URL. Those 21 keys are already in the published `registries.json`.
 
-The SVG files are published with the index site. GitHub Pages returns HTTP 404 for `/badge.svg`. The worker at `https://stageproof-index-badges.stageproof.workers.dev` answers that query with HTTP 200. It answers `not indexed` when the pair is absent, and also when the nightly site has not published that SVG yet.
+The SVG files are published with the index site. GitHub Pages returns HTTP 404 for `/badge.svg`. The worker at `https://stageproof-index-badges.stageproof.workers.dev` answers that query with HTTP 200. A chart the catalog does not have says `not indexed`. A chart it has, without that exact pair, says `pair not indexed`. A pair the nightly site has not published yet is the second case.
 
 ## Patch automerge
 
